@@ -2,12 +2,18 @@
   "name": "service-management-app",
   "version": "1.0.0",
   "private": true,
-  "workspaces": ["server", "client"],
+  "workspaces": [
+    "server",
+    "client"
+  ],
   "scripts": {
     "dev": "concurrently \"npm run dev -w server\" \"npm run dev -w client\"",
     "build": "npm run build -w client",
     "start": "npm run start -w server",
     "test": "npm test -w server"
   },
-  "devDependencies": { "concurrently": "^9.1.2" }
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "vite-plugin-pwa": "^2.0.0"
+  }
 }
